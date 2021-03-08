@@ -7,11 +7,14 @@ public class DialougeSystem : MonoBehaviour
 {
     [TextArea]
     public List<string> lines;
-    public Text text;
+    public Text dialougeText;
+    public Image image;
+    public Text characterNameText;
 
     private int currentLineIndex =0;
     private bool previousLineFinished =true;
     private bool fullTextShown;
+
 
     void Start()
     {
@@ -30,7 +33,7 @@ public class DialougeSystem : MonoBehaviour
 
     public void showText()
     {
-        text.text = string.Empty;
+        dialougeText.text = string.Empty;
         previousLineFinished = false;
         StartCoroutine(showTextRoutine(currentLineIndex));
     }
@@ -41,7 +44,7 @@ public class DialougeSystem : MonoBehaviour
         char[] letters = lines[index].ToCharArray();
         foreach(char c in letters)
         {
-            text.text += c;
+            dialougeText.text += c;
             yield return new WaitForSeconds(0.05f);
         }
 
@@ -52,7 +55,7 @@ public class DialougeSystem : MonoBehaviour
         {
             currentLineIndex = 0;
             fullTextShown = true;
-            text.text = string.Empty;
+            dialougeText.text = string.Empty;
         }
 
 
