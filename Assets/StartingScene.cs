@@ -7,13 +7,14 @@ public class StartingScene : MonoBehaviour
 
     public static StartingScene instance;   
     public Transform dorianNextPosition;
+    public DialougeSystem dialougeSystem;
 
     public void Start()
     {
         instance = this;
-        
-        DialougeSystem.instance.AddText(Dialouges.instance.basilDialouges);
-        DialougeSystem.instance.SetDialougeShowType(DialougeSystem.DialougeShowType.auto);
+
+        dialougeSystem.AddText(Dialouges.instance.basilDialouges);
+        dialougeSystem.SetDialougeShowType(DialougeSystem.DialougeShowType.auto);
     }
 
     public void SettingUpNextPhase()

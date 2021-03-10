@@ -24,11 +24,11 @@ public class DialougeSystem : MonoBehaviour
     private bool fullTextShown;
 
 
-    public static DialougeSystem instance;
+    //public static DialougeSystem instance;
 
     void Start()
     {
-        instance = this;
+        //instance = this;
     }
 
     // Update is called once per frame

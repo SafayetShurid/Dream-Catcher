@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dorianNextPosition: {fileID: 893893187}
+  dialougeSystem: {fileID: 512944829}
 --- !u!4 &21798059
 Transform:
   m_ObjectHideFlags: 0
