@@ -10,13 +10,15 @@ public class PlayerMovement : MonoBehaviour
  
     private Rigidbody2D rb;
     private Animator animator;
-
+    public TransitionPosition transitionPosition;
+    
    // public NPC currentNPC;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        transform.position = transitionPosition.initialValue;
     }
 
     // Update is called once per frame
