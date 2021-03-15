@@ -1,0 +1,432 @@
+fileFormatVersion: 2
+guid: 55fa035c9a48ad54296593529eccc47e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2047357006685621790
+    second: dcgs25_20Throwing_20Animation (1) (1)_0
+  - first:
+      213: 1695617172657565846
+    second: dcgs25_20Throwing_20Animation (1) (1)_1
+  - first:
+      213: 6357710347073968383
+    second: dcgs25_20Throwing_20Animation (1) (1)_2
+  - first:
+      213: 5032930012588296230
+    second: dcgs25_20Throwing_20Animation (1) (1)_3
+  - first:
+      213: 6490945067222394673
+    second: dcgs25_20Throwing_20Animation (1) (1)_4
+  - first:
+      213: -4717300407662188573
+    second: dcgs25_20Throwing_20Animation (1) (1)_5
+  - first:
+      213: 4543613611042932287
+    second: dcgs25_20Throwing_20Animation (1) (1)_6
+  - first:
+      213: -4478313577311273065
+    second: dcgs25_20Throwing_20Animation (1) (1)_7
+  - first:
+      213: 1311314029027775393
+    second: dcgs25_20Throwing_20Animation (1) (1)_8
+  - first:
+      213: 2951278706829667919
+    second: dcgs25_20Throwing_20Animation (1) (1)_9
+  - first:
+      213: 181584323504320652
+    second: dcgs25_20Throwing_20Animation (1) (1)_10
+  - first:
+      213: -9090636168003495704
+    second: dcgs25_20Throwing_20Animation (1) (1)_11
+  - first:
+      213: 7919117874709227172
+    second: dcgs25_20Throwing_20Animation (1) (1)_12
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dcgs25_20Throwing_20Animation (1) (1)_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 75
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1b81856a35693e0800000000000000
+      internalID: -2047357006685621790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dcgs25_20Throwing_20Animation (1) (1)_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 74
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6907e43b5da088710800000000000000
+      internalID: 1695617172657565846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dcgs25_20Throwing_20Animation (1) (1)_2
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 75
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff85b2640ef1b3850800000000000000
+      internalID: 6357710347073968383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dcgs25_20Throwing_20Animation (1) (1)_3
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 76
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6284abb4e2f88d540800000000000000
+      internalID: 5032930012588296230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dcgs25_20Throwing_20Animation (1) (1)_4
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 76
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1376d5ce528741a50800000000000000
+      internalID: 6490945067222394673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dcgs25_20Throwing_20Animation (1) (1)_5
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 74
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e76d76c548c88eb0800000000000000
+      internalID: -4717300407662188573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dcgs25_20Throwing_20Animation (1) (1)_6
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 75
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3608d291882e0f30800000000000000
+      internalID: 4543613611042932287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dcgs25_20Throwing_20Animation (1) (1)_7
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 22
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f7d8f4785d9d1c0800000000000000
+      internalID: -4478313577311273065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dcgs25_20Throwing_20Animation (1) (1)_8
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 2
+        width: 75
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3df296929b23210800000000000000
+      internalID: 1311314029027775393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dcgs25_20Throwing_20Animation (1) (1)_9
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 3
+        width: 75
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ea1c9e85c05f820800000000000000
+      internalID: 2951278706829667919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dcgs25_20Throwing_20Animation (1) (1)_10
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 2
+        width: 54
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80314beafd158200800000000000000
+      internalID: 181584323504320652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dcgs25_20Throwing_20Animation (1) (1)_11
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 47
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e855d7c19297d180800000000000000
+      internalID: -9090636168003495704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dcgs25_20Throwing_20Animation (1) (1)_12
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 3
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a66d70ffbb56ed60800000000000000
+      internalID: 7919117874709227172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
