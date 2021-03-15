@@ -8,6 +8,13 @@ public class Dialouges : MonoBehaviour
     [Header("Basil")]
     public List<string> basilDialouges;
 
+    [Header("Battle Scene")]   
+    [TextArea]
+    public List<string> battleDialouges;
+
+    [Header("Common")]
+    public string chooseAnAttack = "Choose an Attack";
+
     public static Dialouges instance;
 
     public void Awake()

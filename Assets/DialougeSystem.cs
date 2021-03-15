@@ -7,7 +7,7 @@ public class DialougeSystem : MonoBehaviour
 {
     public enum DialougeShowType
     {
-        auto,manual
+        auto, manual
     }
 
     [TextArea]
@@ -17,10 +17,10 @@ public class DialougeSystem : MonoBehaviour
     public Text characterNameText;
     public DialougeShowType dialougeShowType;
     private bool dialougeStarts;
-    
 
-    private int currentLineIndex =0;
-    private bool previousLineFinished =true;
+
+    private int currentLineIndex = 0;
+    private bool previousLineFinished = true;
     private bool fullTextShown;
 
 
@@ -34,7 +34,7 @@ public class DialougeSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(dialougeShowType.Equals(DialougeShowType.auto) && dialougeStarts)
+        /*if(dialougeShowType.Equals(DialougeShowType.auto) && dialougeStarts)
         {
             if (!fullTextShown)
             {
@@ -49,8 +49,8 @@ public class DialougeSystem : MonoBehaviour
                 if (previousLineFinished)
                     showText();
             }
-        }
-       
+        }*/
+
     }
 
     public void showText()
@@ -64,7 +64,7 @@ public class DialougeSystem : MonoBehaviour
     {
 
         char[] letters = lines[index].ToCharArray();
-        foreach(char c in letters)
+        foreach (char c in letters)
         {
             dialougeText.text += c;
             yield return new WaitForSeconds(0.05f);
@@ -72,8 +72,8 @@ public class DialougeSystem : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         currentLineIndex++;
         previousLineFinished = true;
-       
-        if (currentLineIndex>=lines.Count)
+
+        if (currentLineIndex >= lines.Count)
         {
             currentLineIndex = 0;
             fullTextShown = true;
@@ -93,5 +93,51 @@ public class DialougeSystem : MonoBehaviour
     {
         dialougeShowType = _dialougeShowType;
         dialougeStarts = true;
+    }
+
+    public void ShowText(string textToShow)
+    {
+        StartCoroutine(ShowTextRoutine(textToShow));
+    }
+
+    public void ShowText(List<string> textToShow)
+    {
+        StartCoroutine(ShowTextRoutine(textToShow));
+    }
+
+    IEnumerator ShowTextRoutine(string textToshow)
+    {
+        char[] letters = textToshow.ToCharArray();
+        foreach (char c in letters)
+        {
+            dialougeText.text += c;
+            yield return new WaitForSeconds(0.05f);
+        }
+        yield return new WaitForSeconds(1.5f);
+        dialougeText.text = string.Empty;
+       // this.gameObject.SetActive(false);
+
+    }
+
+    IEnumerator ShowTextRoutine(List<string> textToShow)
+    {
+        int index = 0;
+      
+        while(index<textToShow.Count)
+        {
+            char[] letters = textToShow[index].ToCharArray();
+            foreach (char c in letters)
+            {
+                dialougeText.text += c;
+                yield return new WaitForSeconds(0.05f);
+            }
+            yield return new WaitForSeconds(1.5f);
+            dialougeText.text = string.Empty;
+            index++;
+
+        }
+      
+        // this.gameObject.SetActive(false);
+
     }
 }
