@@ -10,15 +10,19 @@ public class Dialouges : MonoBehaviour
 
     [Header("Battle Scene")]   
     [TextArea]
-    public List<string> battleDialouges;
+    public List<string> battleStartingDialouges;
 
     [Header("Common")]
     public string chooseAnAttack = "Choose an Attack";
+    public string henryUsed = "Henry Used";
+    public string itsNotveryEffective = "It's not very effective........";
+    public string itsSuperEffective = "It's super effective........";
 
     public static Dialouges instance;
 
-    public void Awake()
+    private void Awake()
     {
         instance = this;
     }
+
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,7 +19,7 @@ public class DialougeSystem : MonoBehaviour
     public DialougeShowType dialougeShowType;
     private bool dialougeStarts;
 
-
+    
     private int currentLineIndex = 0;
     private bool previousLineFinished = true;
     private bool fullTextShown;
@@ -95,35 +96,21 @@ public class DialougeSystem : MonoBehaviour
         dialougeStarts = true;
     }
 
-    public void ShowText(string textToShow)
+    public void ShowText(string textToShow,bool textStaysInHud, Action afterTextShown)
     {
-        StartCoroutine(ShowTextRoutine(textToShow));
+        StartCoroutine(ShowTextRoutine(new List<string>() {textToShow},textStaysInHud,afterTextShown));
     }
 
-    public void ShowText(List<string> textToShow)
+    public void ShowText(List<string> textToShow, bool textStaysInHud,Action afterTextShown)
     {
-        StartCoroutine(ShowTextRoutine(textToShow));
-    }
+        StartCoroutine(ShowTextRoutine(textToShow, textStaysInHud, afterTextShown));
+    }  
 
-    IEnumerator ShowTextRoutine(string textToshow)
-    {
-        char[] letters = textToshow.ToCharArray();
-        foreach (char c in letters)
-        {
-            dialougeText.text += c;
-            yield return new WaitForSeconds(0.05f);
-        }
-        yield return new WaitForSeconds(1.5f);
-        dialougeText.text = string.Empty;
-       // this.gameObject.SetActive(false);
-
-    }
-
-    IEnumerator ShowTextRoutine(List<string> textToShow)
+    IEnumerator ShowTextRoutine(List<string> textToShow,bool textStaysInHud,Action afterTextShown)
     {
         int index = 0;
-      
-        while(index<textToShow.Count)
+        dialougeText.text = string.Empty;
+        while (index<textToShow.Count)
         {
             char[] letters = textToShow[index].ToCharArray();
             foreach (char c in letters)
@@ -132,11 +119,11 @@ public class DialougeSystem : MonoBehaviour
                 yield return new WaitForSeconds(0.05f);
             }
             yield return new WaitForSeconds(1.5f);
-            dialougeText.text = string.Empty;
+            dialougeText.text = textStaysInHud!=true ? string.Empty : dialougeText.text ;
             index++;
 
         }
-      
+        afterTextShown();
         // this.gameObject.SetActive(false);
 
     }

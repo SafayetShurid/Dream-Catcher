@@ -21,12 +21,17 @@ public class BattleSceneSetup : MonoBehaviour
         switch(textToShow)
         {
             case TextToShow.AttackText:
-                dialougeSystem.ShowText(Dialouges.instance.chooseAnAttack);
+                dialougeSystem.ShowText(Dialouges.instance.chooseAnAttack,true,()=> { });
                 break;
             case TextToShow.BattleSceneIntro:
-                dialougeSystem.ShowText(Dialouges.instance.battleDialouges);
+                dialougeSystem.ShowText(Dialouges.instance.battleStartingDialouges,false, () => { });
                 break;
         }
       
+    }
+
+    public void TextTrigger()
+    {
+        dialougeSystem.ShowText(Dialouges.instance.battleStartingDialouges,false, () => { });
     }
 }
