@@ -28,10 +28,12 @@ public class Hud : MonoBehaviour
     IEnumerator ReduceSliderValueRoutine(float amount)
     {
         float target = slider.value - amount;
-        while(slider.value<=target)
+        while(slider.value>target)
         {
             yield return new WaitForSeconds(0.05f);
             slider.value -= 0.5f;
         }
+
+        Debug.Log("Code Running");
     }
 }

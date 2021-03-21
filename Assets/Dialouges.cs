@@ -11,6 +11,12 @@ public class Dialouges : MonoBehaviour
     [Header("Battle Scene")]   
     [TextArea]
     public List<string> battleStartingDialouges;
+    public List<string> attackPhase1Dialouges;
+    public List<string> attackPhase2Dialouges;
+    public List<string> attackPhase3Dialouges;
+    public List<string> attackPhase4Dialouges;
+    public List<string> attackPhase5Dialouges;
+    public List<string> attackPhase6Dialouges;
 
     [Header("Common")]
     public string chooseAnAttack = "Choose an Attack";

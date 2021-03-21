@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 16482591}
   - component: {fileID: 16482592}
   m_Layer: 5
-  m_Name: Parent
+  m_Name: Opponent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -231,9 +231,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36de6e5bfa4e0a49b66233873cf3394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hud: {fileID: 0}
-  health: 0
-  dialougeSystem: {fileID: 0}
+  hud: {fileID: 503029259}
+  health: 100
+  currentPhase: 0
+  dialougeSystem: {fileID: 634859430}
 --- !u!1 &53859802
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +251,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!320 &53859803
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -432,7 +433,7 @@ GameObject:
   - component: {fileID: 165995908}
   - component: {fileID: 165995909}
   m_Layer: 5
-  m_Name: Texts
+  m_Name: Moves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -522,6 +523,28 @@ MonoBehaviour:
   battleStartingDialouges:
   - Henry wants to battle!
   - "Dorian what are you doing with that? That\u2019s not a toy!"
+  attackPhase1Dialouges:
+  - Dad is confused
+  - Dad uses confused yelling
+  - It's not very effective........
+  attackPhase2Dialouges:
+  - Dad uses tackle
+  - It's not very effective........
+  attackPhase3Dialouges:
+  - "Dad is unable to fight\u2026."
+  - "I\u2019m going to find her\u2026your wife\u2026."
+  - Mom used hide
+  - It's not very effective........
+  - Why did you do that Dorian
+  attackPhase4Dialouges:
+  - Mom used beg
+  - It's not very effective........
+  attackPhase5Dialouges:
+  - Mom used cry
+  - It's not very effective........
+  attackPhase6Dialouges:
+  - Mom used I still love you
+  - "it\u2019s super effective!"
   chooseAnAttack: Choose an Attack
   henryUsed: Henry Used
   itsNotveryEffective: It's not very effective........
@@ -599,7 +622,7 @@ GameObject:
   - component: {fileID: 410882483}
   - component: {fileID: 410882484}
   m_Layer: 5
-  m_Name: Dorian
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -693,9 +716,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4d5c6bce3385f4aaf62ce68216d81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hud: {fileID: 0}
-  health: 0
+  hud: {fileID: 546115201}
+  health: 100
   dialougeSystem: {fileID: 634859430}
+  movesPanel: {fileID: 165995907}
 --- !u!114 &410882484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -740,7 +764,7 @@ GameObject:
   - component: {fileID: 503029260}
   - component: {fileID: 503029259}
   m_Layer: 5
-  m_Name: ParentsHud
+  m_Name: OpponentHud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -765,7 +789,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.62874997, y: 0.24444328}
   m_AnchorMax: {x: 0.9881253, y: 0.44111347}
-  m_AnchoredPosition: {x: -1675, y: 476.99988}
+  m_AnchoredPosition: {x: -1674.9996, y: 476.99988}
   m_SizeDelta: {x: 0.9000244, y: 6.9000244}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &503029257
@@ -1224,7 +1248,7 @@ GameObject:
   - component: {fileID: 546115202}
   - component: {fileID: 546115201}
   m_Layer: 5
-  m_Name: DorianHud
+  m_Name: PlayerHud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1249,7 +1273,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.62874997, y: 0.24444328}
   m_AnchorMax: {x: 0.9881253, y: 0.44111347}
-  m_AnchoredPosition: {x: 718, y: -9.724968}
+  m_AnchoredPosition: {x: 717.99994, y: -9.724972}
   m_SizeDelta: {x: 0.9, y: 19.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &546115199
@@ -2284,7 +2308,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &740605826
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2337,7 +2361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3529,9 +3553,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -10836,7 +10860,7 @@ GameObject:
   - component: {fileID: 1461007308}
   - component: {fileID: 1461007307}
   m_Layer: 5
-  m_Name: Buulbasor
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10894,7 +10918,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Dorian
+  m_Text: Henry
 --- !u!222 &1461007308
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15266,7 +15290,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 18.900024, y: -33.000008}
+  m_AnchoredPosition: {x: 18.900024, y: -33.00001}
   m_SizeDelta: {x: -131, y: -128.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1761708703
@@ -15314,9 +15338,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

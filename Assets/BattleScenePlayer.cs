@@ -14,6 +14,7 @@ public class BattleScenePlayer : MonoBehaviour
     public Hud hud;
     public int health;
     public DialougeSystem dialougeSystem;
+    public GameObject movesPanel;
 
     public static BattleScenePlayer instance;
     void Start()
@@ -37,22 +38,22 @@ public class BattleScenePlayer : MonoBehaviour
         switch(moves)
         {
             case Moves.Cut:
-                BattleSceneOpponent.instance.TakeDamage(20,()=> { });
+                BattleSceneOpponent.instance.TakeDamage(20,()=> { BattleSceneOpponent.instance.hud.ReduceSliderValue(20);});
                 break;
             case Moves.Scratch:
-                BattleSceneOpponent.instance.TakeDamage(20, () => { });
+                BattleSceneOpponent.instance.TakeDamage(20, () => { BattleSceneOpponent.instance.hud.ReduceSliderValue(20); });
                 break;
             case Moves.Slash:
-                BattleSceneOpponent.instance.TakeDamage(20, () => { });
+                BattleSceneOpponent.instance.TakeDamage(20, () => { BattleSceneOpponent.instance.hud.ReduceSliderValue(20); });
                 break;
             case Moves.Rage:
-                BattleSceneOpponent.instance.TakeDamage(20, () => { });
+                BattleSceneOpponent.instance.TakeDamage(20, () => { BattleSceneOpponent.instance.hud.ReduceSliderValue(20); });
                 break;
         }
     }
 
     public void AttackTurn()
     {
-        dialougeSystem.ShowText(Dialouges.instance.chooseAnAttack,true,()=> { });
+        dialougeSystem.ShowText(Dialouges.instance.chooseAnAttack,true,()=> { movesPanel.gameObject.SetActive(true); });
     }
 }
