@@ -15,11 +15,13 @@ public class BattleScenePlayer : MonoBehaviour
     public int health;
     public DialougeSystem dialougeSystem;
     public GameObject movesPanel;
+    public Animator animator;
 
     public static BattleScenePlayer instance;
     void Start()
     {
         instance = this;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -38,7 +40,9 @@ public class BattleScenePlayer : MonoBehaviour
         switch(moves)
         {
             case Moves.Cut:
+                animator.SetTrigger("Cut");
                 BattleSceneOpponent.instance.TakeDamage(20,()=> { BattleSceneOpponent.instance.hud.ReduceSliderValue(20);});
+               
                 break;
             case Moves.Scratch:
                 BattleSceneOpponent.instance.TakeDamage(20, () => { BattleSceneOpponent.instance.hud.ReduceSliderValue(20); });
@@ -47,7 +51,9 @@ public class BattleScenePlayer : MonoBehaviour
                 BattleSceneOpponent.instance.TakeDamage(20, () => { BattleSceneOpponent.instance.hud.ReduceSliderValue(20); });
                 break;
             case Moves.Rage:
+                animator.SetTrigger("Rage");
                 BattleSceneOpponent.instance.TakeDamage(20, () => { BattleSceneOpponent.instance.hud.ReduceSliderValue(20); });
+               
                 break;
         }
     }
