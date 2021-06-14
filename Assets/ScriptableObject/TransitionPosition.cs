@@ -4,30 +4,11 @@ using UnityEngine;
 
 
 [CreateAssetMenu]
-public class TransitionPosition : ScriptableObject,ISerializationCallbackReceiver
+public class TransitionPosition : ScriptableObject
 {
 
-    public Vector2 initialValue;
-    public Vector2 defaultValue;
+    public Vector3 playerPosition;
+    public Vector3 cameraPosition;
+    public string roomName;
 
-    public void OnAfterDeserialize()
-    {
-        initialValue = defaultValue;
-    }
-
-    public void OnBeforeSerialize()
-    {
-       
-    }
-
-    void Start()
-    {
-        
-    } 
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
